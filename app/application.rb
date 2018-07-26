@@ -2,12 +2,12 @@ class Application
 
   @@items = [Item.new("Figs",3.42), Item.new("Pears",0.99)]
 
-  def call(env) 
-    resp = Rack::Response.new 
-    req = Rack::Request.new(env) 
+  def call(env)
+    resp = Rack::Response.new
+    req = Rack::Request.new(env)
 
     @@items.each do |item|
 
     end 
-  end 
+  end
 end
