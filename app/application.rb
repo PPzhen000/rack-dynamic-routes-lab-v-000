@@ -7,7 +7,9 @@ class Application
     req = Rack::Request.new(env)
 
     @@items.each do |item|
-      resp.write "#{item.price}" 
-    end 
+      resp.write "#{item.price}"
+    end
+
+    resp.finish 
   end
 end
