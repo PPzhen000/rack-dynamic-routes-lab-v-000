@@ -5,11 +5,13 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-
-    @@items.each do |item|
+    
+    if req.path.match(/item/)
+      @@items.each do |item|
       resp.write "#{item.price}"
+      end
+    elsif
     end
-
-    resp.finish 
+    resp.finish
   end
 end
